@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+        <title>
+            Boilerplate Landscape - Prototype
+        </title>
+        <style>
+            :root {
+                touch-action: pan-x pan-y;
+                height: 100%;
+            }
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden !important;
+                /* background: #fff; */
+                background-color: #646262;
+                /* background: #9FEAFE; */
+                
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Old versions of Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                        user-select: none; /* Non-prefixed version, currently
+                                            supported by Chrome, Edge, Opera and Firefox */
+            }
+            
+            #game-instructions {
+                padding: 10px;
+            }
+            .center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            .directions {
+                font-family: 'Montserrat';
+                color: #fff;
+                font-size: 48px;
+            }
+
+            #game-surface {
+                background: #140d0d;
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+
+            #seeds {
+                font-family: 'Montserrat';
+                color: #fff;
+                font-size: 48px;
+                padding: 10px;
+
+                margin: 0;
+                position: absolute;
+                /* top: 50%; */
+                left: 50%;
+                transform: translate(-50%, 0%);
+                text-align: center;
+            }
+            @media only screen and (max-width: 768px) {
+                #seeds {
+                    font-family: 'Montserrat';
+                    color: #fff;
+                    font-size: 24px;
+                    padding: 10px;
+
+                    margin: 0;
+                    position: absolute;
+                    /* top: 50%; */
+                    left: 50%;
+                    transform: translate(-50%, 0%);
+                    text-align: center;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+      
+     
+
+        
+        <script type="text/javascript" src="characters/mob.js"></script>
+        <script type="text/javascript" src="characters/tower.js"></script>
+        <script type="text/javascript" src="phaser io/phaser.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="scenes/campaign.js"></script>
+        <script type="text/javascript" src="scenes/lobby.js"></script>
+        <script type="text/javascript" src="scenes/pvp.js"></script>
+        
+        <script type="text/javascript">
+     
+
+
+            initializeGame();
+
+            // if (!isPortrait()) {
+            //    e.innerHTML = "Rotate to portrait to start the game.";
+            // } else {
+            //     initializeGame();
+            // }
+
+            // window.addEventListener("orientationchange", function() {
+            //     if (isPortrait()) {
+            //         canvas.style.display = 'none';
+            //         startGame = false;
+            //         location.href = '';
+            //     }
+
+            //     if (!startGame) {
+            //         startGame = !isPortrait();
+
+            //         if (startGame) {
+            //             initializeGame();
+            //         } 
+            //     }
+            // }, false);
+
+            // function initializeGame() {
+            //     e.innerHTML = "Loading...";
+            //     main(document.documentElement.clientWidth, document.documentElement.clientHeight);
+            // }
+
+            function initializeGame() {
+               
+               setTimeout(() => {
+                   /* AM = new AssetManager(() => {
+                        setTimeout(() => {
+                            main(document.documentElement.clientWidth, document.documentElement.clientHeight);
+                        }, 2000);
+                    });*/
+
+                    main(document.documentElement.clientWidth, document.documentElement.clientHeight)
+
+                   // AM.initImageAssets('data/images.json');
+                    // AM.initAudioAssets('data/audio.json');
+                }, 1000);
+
+
+            }
+        </script>
+    </body>
+</html>
